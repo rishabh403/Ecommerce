@@ -1,0 +1,25 @@
+.customShadow {
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+/***user table***/
+.userTable {
+    background-color: white;
+}
+
+.userTable th {
+    border: 1px solid #e5e7eb; /* Tailwind's default border color */
+    font-size: 1rem; /* Tailwind's text-base */
+    font-weight: 500; /* Tailwind's font-medium */
+}
+
+.userTable td {
+    border: 1px solid #e5e7eb; /* Tailwind's default border color */
+    font-size: 1rem; /* Tailwind's text-base */
+    text-align: center;
+}
+
+/**scrollbar hidden****/
+.scrollbar-none::-webkit-scrollbar {
+    display: none;
+}
