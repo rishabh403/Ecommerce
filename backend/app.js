@@ -14,7 +14,12 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
-app.use(cors());
+app.use(cors({
+  origin: 'https://ecommerce-afaf.onrender.com', // Replace with your frontend domain
+  credentials: true, // Allow cookies to be sent
+  methods: ['GET', 'POST', 'PUT','PATCH', 'DELETE', 'OPTIONS'], // Allowed HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'] // Allowed headers
+}));
 app.use(cookieParser());
 
 let DB_URL = process.env.DB_URL;
